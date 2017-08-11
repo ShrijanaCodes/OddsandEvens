@@ -7,11 +7,11 @@ public class OddsAndEvens {
         String name = console.nextLine();
         System.out.println("Hi " + name + ", which do you choose? (O)dds or (E)vens? ");
         String user = console.nextLine();
-        if (user.equalsIgnoreCase("Evens")) {
+        if (user.equalsIgnoreCase("E")) {
             System.out.println(name + " picked evens. The computer will be odds!");
         }
 
-        else if (user.equalsIgnoreCase("Odds")){
+        else if (user.equalsIgnoreCase("O")){
             System.out.println(name + " picked odds. The computer will be evens!");
         }
         System.out.println("-----------------------------------------------");
