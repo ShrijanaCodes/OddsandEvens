@@ -7,6 +7,7 @@ public class OddsAndEvens {
         String name = console.nextLine();
         System.out.println("Hi " + name + ", which do you choose? (O)dds or (E)vens? ");
         String user = console.nextLine();
+        boolean even_pick = user.equalsIgnoreCase("E");
         if (user.equalsIgnoreCase("E")) {
             System.out.println(name + " picked evens. The computer will be odds!");
         }
@@ -15,11 +16,7 @@ public class OddsAndEvens {
             System.out.println(name + " picked odds. The computer will be evens!");
         }
         System.out.println("-----------------------------------------------");
-        fingers();
-    }
-    public static void fingers(){
         System.out.println("How many \"fingers\" do you put out? ");
-        Scanner console = new Scanner(System.in);
         int num = console.nextInt();
         Random rand = new Random();
         int computer = rand.nextInt(6);
@@ -29,6 +26,13 @@ public class OddsAndEvens {
         boolean oddOrEven = sum % 2 == 0;
             if ( oddOrEven == true){
             System.out.println(num + " + " + computer+ " = " + sum + " is..... even." );
+                if (even_pick == true) {
+                    System.out.println("That means "+ name + " wins!");
+                }
+                else{
+                    System.out.println("The computer wins!");
+                }
+
             }
          else{
             System.out.println(num + " + " + computer+ " = " + sum + " is..... odd." );
